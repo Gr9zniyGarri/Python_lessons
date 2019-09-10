@@ -19,3 +19,10 @@ product['dscounted_price'] = discounted(product['price'], product['discount'])
 print(product)
 
 discounted(50000, 17)
+
+
+def format_price(price: int):
+    return f'Цена: {price} руб.'
+
+
+print(format_price(58.76))
