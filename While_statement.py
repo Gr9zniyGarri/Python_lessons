@@ -6,16 +6,14 @@ def questionnaire():
     while True:
         try:
             user_input = input('How are thing with you? ')
+            default_answer = f'This is not what asked about: {user_input}'
             if user_input == 'Хорошо':
-                print('Ну и славно')
+                print('\nНу и славно')
                 break
-            elif user_input in answers_for_user:
-                print(answers_for_user[user_input])
-            else:
-                print(f'This is not what asked about: {user_input}')
+            else: 
+                print(answers_for_user.get(user_input, default_answer))
         except(KeyboardInterrupt):
-            print("Пока!")
+            print("\nПока!")
             break
 
-
-print(questionnaire())
+questionnaire()
